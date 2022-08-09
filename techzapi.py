@@ -13,7 +13,7 @@ app = FastAPI()
 @app.get("/")
 async def home():
     await add_to_db(3)
-    return {"status": "TechZBots - Api working fine..."}
+    return {"status": "ImRishmikaAPi Working Fine....  Don't Think About It"}
 
 
 @app.get("/wall")
@@ -143,10 +143,10 @@ async def search_lyrics(query: str):
 
 @app.get("/thumb")
 async def generate_thumbnail(videoid: str, botname: Optional[str] = None):
-    "Generate thumbnail"
+    "Generate thumbnail he he he he "
 
     if not botname:
-      botname = "SiestaXMusic"
+      botname = "RoseBot"
     thumb = await gen_thumb(videoid,botname)
     await add_to_db(1)
     return RedirectResponse(thumb)
